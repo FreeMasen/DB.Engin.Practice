@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define HASH_MAP_SIZE 100
+
+
+typedef struct node {
+    int data;
+    struct node *next;
+};
+
+node *hash_map[HASH_MAP_SIZE];
+#define is_valid_key(key)\
+    if (key >= HASH_MAP_SIZE){ \
+        printf("wrong key value\n");\
+        return;\
+    }
+
+node *create_node(int val)
+{
+    node *temp = malloc(sizeof(*temp));
+    temp->data = val
+    temp-next = NULL;
+    return temp;
+}
+
